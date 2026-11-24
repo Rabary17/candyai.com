@@ -1,0 +1,16 @@
+{
+  "checked": "2026-11-24",
+  "currency": "USD",
+  "note": "Prix publics relevés en 2026 (sources : pages de tests et page tarifs Candy AI). Revérifier chaque mois sur candy.ai avant publication.",
+  "candyAi": {
+    "plans": [
+      { "id": "monthly", "label": { "en": "Monthly", "fr": "Mensuel" }, "pricePerMonth": 13.99, "billed": 13.99, "tokens": 100 },
+      { "id": "quarterly", "label": { "en": "Quarterly", "fr": "Trimestriel" }, "pricePerMonth": 8.99, "billed": 26.97, "tokens": 100 },
+      { "id": "annual", "label": { "en": "Annual", "fr": "Annuel" }, "pricePerMonthMin": 3.99, "pricePerMonthMax": 6.30, "billedMin": 47.88, "billedMax": 75.60, "tokens": 100, "best": true }
+    ],
+    "tokenCosts": { "image": 4, "callPerMinute": 3, "voiceMessage": null, "liveActionVideo": null },
+    "tokenPacks": { "fromPrice": 9.99, "fromTokens": 100 },
+    "billingDescriptor": "EverAI",
+    "company": "EverAI Limited, Malta (C107181)"
+  }
+}
