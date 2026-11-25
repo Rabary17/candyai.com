@@ -10,7 +10,7 @@ export const TABLES: Record<string, Table> = {
     fr: ["Application", "Dès /mois", "Contenu adulte", "Images", "Notre note"],
     rows: [
       { app: "Candy AI", cells: ["$3.99 (yearly)", "✅", "✅ tokens", "7.4/10"], program: "candy-ai" },
-      { app: "OurDream AI", cells: [T, "✅", "✅", T], program: "ourdream-ai" },
+      { app: "OurDream AI", cells: ["$9.99 (yearly)", "✅", "✅ coins", "7.6/10"], program: "ourdream-ai" },
       { app: "Replika", cells: ["~$7.99 (Pro)", "Limited", "❌", T], program: "replika" },
     ],
   },
@@ -30,7 +30,7 @@ export const TABLES: Record<string, Table> = {
     fr: ["Application", "Dès /mois", "Gratuit", "Images", "Voix", "Contenu adulte", "Notre note"],
     rows: [
       { app: "Candy AI", cells: ["$3.99 (yearly)", "Limited", "✅ tokens", "✅ tokens", "✅", "7.4/10"], program: "candy-ai" },
-      { app: "OurDream AI", cells: [T, T, "✅", T, "✅", T], program: "ourdream-ai" },
+      { app: "OurDream AI", cells: ["$9.99 (yearly)", "50 msgs/day", "✅ coins", "✅ coins", "✅", "7.6/10"], program: "ourdream-ai" },
       { app: "Kupid AI", cells: [T, T, "✅", T, "✅", T], program: "kupid-ai" },
       { app: "Nectar AI", cells: [T, T, "✅", T, "✅", T], program: "nectar-ai" },
       { app: "Replika", cells: ["~$7.99 (Pro)", "✅", "❌", "✅", "Limited", T], program: "replika" },
@@ -52,7 +52,7 @@ export const TABLES: Record<string, Table> = {
     fr: ["Application", "Pour qui", "Dès /mois", "Gratuit", "Notre note"],
     rows: [
       { app: "Candy AI", cells: ["Images & customisation", "$3.99 (yearly)", "Limited", "7.4/10"], program: "candy-ai" },
-      { app: "OurDream AI", cells: [T, T, T, T], program: "ourdream-ai" },
+      { app: "OurDream AI", cells: ["Memory & role-play", "$9.99 (yearly)", "50 msgs/day", "7.6/10"], program: "ourdream-ai" },
       { app: "Kupid AI", cells: [T, T, T, T], program: "kupid-ai" },
       { app: "Replika", cells: ["Friendship", "~$7.99 (Pro)", "✅", T], program: "replika" },
       { app: "Character AI", cells: ["Free role-play", "Free", "✅", T] },
@@ -99,7 +99,7 @@ export const TABLES: Record<string, Table> = {
     fr: ["Application", "Pour qui", "Dès /mois", "Gratuit", "Notre note"],
     rows: [
       { app: "Candy AI", cells: ["Images & customisation", "$3.99 (yearly)", "Limited", "7.4/10"], program: "candy-ai" },
-      { app: "OurDream AI", cells: ["Visual role-play", T, T, T], program: "ourdream-ai" },
+      { app: "OurDream AI", cells: ["Memory, role-play & video", "$9.99 (yearly)", "50 msgs/day", "7.6/10"], program: "ourdream-ai" },
       { app: "CrushOn AI", cells: ["Unfiltered role-play", T, T, T], program: "crushon-ai" },
       { app: "Nomi AI", cells: ["Memory & long chats", T, T, T], program: "nomi-ai" },
       { app: "Kupid AI", cells: [T, T, T, T], program: "kupid-ai" },
@@ -112,7 +112,7 @@ export const TABLES: Record<string, Table> = {
     rows: [
       { app: "CrushOn AI", cells: ["Large, user-made", T, "Optional (18+)", T, T], program: "crushon-ai" },
       { app: "Joi AI", cells: [T, T, "Optional (18+)", T, T], program: "joi-ai" },
-      { app: "OurDream AI", cells: [T, T, "Optional (18+)", T, T], program: "ourdream-ai" },
+      { app: "OurDream AI", cells: ["Large + custom", "50 a day", "Optional (18+)", "Strong", "7.6/10"], program: "ourdream-ai" },
       { app: "Candy AI", cells: ["Curated + custom", "5 in total", "Optional (18+)", "Slips after ~50 msgs", "7.4/10"], program: "candy-ai" },
       { app: "Character AI", cells: ["Huge, user-made", "Unlimited", "Strict", T, T] },
       { app: "Janitor AI", cells: ["Large, user-made", T, "Optional", T, T] },
@@ -126,7 +126,7 @@ export const TABLES: Record<string, Table> = {
     rows: [
       { app: "CrushOn AI", cells: ["Fewer filters, big library", T, "Optional (18+)", T], program: "crushon-ai" },
       { app: "Nomi AI", cells: ["Long-term memory", T, "Optional (18+)", T], program: "nomi-ai" },
-      { app: "OurDream AI", cells: ["Images inside the story", T, "Optional (18+)", T], program: "ourdream-ai" },
+      { app: "OurDream AI", cells: ["Memory + images & video", "50 msgs/day", "Optional (18+)", "7.6/10"], program: "ourdream-ai" },
       { app: "Joi AI", cells: [T, T, "Optional (18+)", T], program: "joi-ai" },
       { app: "Candy AI", cells: ["Custom characters + images", "Limited", "Optional (18+)", "7.4/10"], program: "candy-ai" },
       { app: "Replika", cells: ["One companion, no role-play", "✅", "Strict", T], program: "replika" },
@@ -158,11 +158,11 @@ export const TABLES: Record<string, Table> = {
     en: ["Feature", "Free", "Paid"],
     fr: ["Fonction", "Gratuit", "Payant"],
     rows: [
-      { app: "Text chat", cells: [T, T] },
-      { app: "Images", cells: [T, T] },
-      { app: "Voice", cells: [T, T] },
-      { app: "Video", cells: [T, T] },
-      { app: "Monthly credits", cells: [T, T] },
+      { app: "Text chat", cells: ["50 messages a day", "Unlimited"] },
+      { app: "Images", cells: ["5 a day", "5 a day + 5–10 coins each"] },
+      { app: "Voice", cells: ["❌", "~50 coins/min"] },
+      { app: "Video", cells: ["❌", "100–300 coins/clip"] },
+      { app: "Monthly credits", cells: ["55 once", "1,000 (Deluxe 5,000)"] },
     ],
   },
 };
