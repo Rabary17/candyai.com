@@ -100,7 +100,7 @@ export const TABLES: Record<string, Table> = {
     rows: [
       { app: "Candy AI", cells: ["Images & customisation", "$3.99 (yearly)", "Limited", "7.4/10"], program: "candy-ai" },
       { app: "OurDream AI", cells: ["Memory, role-play & video", "$9.99 (yearly)", "50 msgs/day", "7.6/10"], program: "ourdream-ai" },
-      { app: "CrushOn AI", cells: ["Unfiltered role-play", T, T, T], program: "crushon-ai" },
+      { app: "CrushOn AI", cells: ["Text role-play", "$4.91 (yearly)", "Limited", "7.8/10"], program: "crushon-ai" },
       { app: "Nomi AI", cells: ["Memory & long chats", T, T, T], program: "nomi-ai" },
       { app: "Kupid AI", cells: [T, T, T, T], program: "kupid-ai" },
       { app: "Replika", cells: ["Friendship", "~$7.99 (Pro)", "✅", T], program: "replika" },
@@ -110,7 +110,7 @@ export const TABLES: Record<string, Table> = {
     en: ["Platform", "Character library", "Free messages", "Content filter", "Memory", "Our score"],
     fr: ["Plateforme", "Personnages", "Messages gratuits", "Filtre", "Mémoire", "Notre note"],
     rows: [
-      { app: "CrushOn AI", cells: ["Large, user-made", T, "Optional (18+)", T, T], program: "crushon-ai" },
+      { app: "CrushOn AI", cells: ["Huge, community-made", "Limited", "Optional (18+)", "Up to 100 saved memories", "7.8/10"], program: "crushon-ai" },
       { app: "Joi AI", cells: [T, T, "Optional (18+)", T, T], program: "joi-ai" },
       { app: "OurDream AI", cells: ["Large + custom", "50 a day", "Optional (18+)", "Strong", "7.6/10"], program: "ourdream-ai" },
       { app: "Candy AI", cells: ["Curated + custom", "5 in total", "Optional (18+)", "Slips after ~50 msgs", "7.4/10"], program: "candy-ai" },
@@ -124,7 +124,7 @@ export const TABLES: Record<string, Table> = {
     en: ["App", "Why switch", "Free plan", "Content filter", "Our score"],
     fr: ["Application", "Pourquoi changer", "Gratuit", "Filtre", "Notre note"],
     rows: [
-      { app: "CrushOn AI", cells: ["Fewer filters, big library", T, "Optional (18+)", T], program: "crushon-ai" },
+      { app: "CrushOn AI", cells: ["Fewer filters, huge library", "Limited", "Optional (18+)", "7.8/10"], program: "crushon-ai" },
       { app: "Nomi AI", cells: ["Long-term memory", T, "Optional (18+)", T], program: "nomi-ai" },
       { app: "OurDream AI", cells: ["Memory + images & video", "50 msgs/day", "Optional (18+)", "7.6/10"], program: "ourdream-ai" },
       { app: "Joi AI", cells: [T, T, "Optional (18+)", T], program: "joi-ai" },
@@ -136,7 +136,7 @@ export const TABLES: Record<string, Table> = {
     en: ["App", "Male characters", "Free plan", "Voice", "Our score"],
     fr: ["Application", "Personnages masculins", "Gratuit", "Voix", "Notre note"],
     rows: [
-      { app: "CrushOn AI", cells: [T, T, T, T], program: "crushon-ai" },
+      { app: "CrushOn AI", cells: ["✅ community-made", "Limited", "❌", "7.8/10"], program: "crushon-ai" },
       { app: "Candy AI", cells: ["✅ (boyfriend mode)", "Limited", "✅ tokens", "7.4/10"], program: "candy-ai" },
       { app: "Nomi AI", cells: ["✅ (any gender)", T, T, T], program: "nomi-ai" },
       { app: "Replika", cells: ["✅ (any gender)", "✅", "✅", T], program: "replika" },
@@ -148,7 +148,7 @@ export const TABLES: Record<string, Table> = {
     fr: ["Application", "Messages gratuits", "Compte requis", "Limite principale", "Notre note"],
     rows: [
       { app: "Character AI", cells: ["Unlimited", "✅", "Strict filter", T] },
-      { app: "CrushOn AI", cells: [T, T, T, T], program: "crushon-ai" },
+      { app: "CrushOn AI", cells: ["Limited (changed in 2026)", "✅", "Basic model, filtered", "7.8/10"], program: "crushon-ai" },
       { app: "Nomi AI", cells: [T, "✅", T, T], program: "nomi-ai" },
       { app: "Candy AI", cells: ["5 in total", "✅", "Very short trial", "7.4/10"], program: "candy-ai" },
       { app: "Replika", cells: ["Unlimited (friend)", "✅", "No romance", T], program: "replika" },
