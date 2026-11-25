@@ -80,7 +80,7 @@ export async function DocPage({ lang, slug }: { lang: Lang; slug?: string[] }) {
               <h1>{f.h1}</h1>
               {f.lede && <p className="chapo"><strong><em>{f.lede}</em></strong></p>}
               {f.template !== "page" && (
-                <div className="author"><span className="author__img" role="img" aria-label="author" /><span>{t.by} <mark className="todo">{lang === "fr" ? "Auteur" : "Author"}</mark> · {t.lastChecked} {f.updated}</span></div>
+                <div className="author"><span className="author__img" role="img" aria-label="author" /><span>{t.by} <a href={lang === "fr" ? "/fr/a-propos/" : "/about/"}>{lang === "fr" ? "la rédaction AI Girlfriend Rated" : "the AI Girlfriend Rated team"}</a> · {t.lastChecked} {f.updated}</span></div>
               )}
             </div>
             {f.image && (
