@@ -182,6 +182,10 @@ async function construireArticle(sujet) {
   let { titre, corps } = separerTitre(res.texte, keyword);
   corps = corps.replace(/\s?\[S\d+\]/g, "");
   if (res.audit.bloquant) return { ok: false, lang, keyword, raison: `garde-fou : ${res.audit.violations.length} violation(s)` };
+  // Marqueurs [À VÉRIFIER] : jusqu'à 3, on retire les phrases concernées ; au-delà, l'article est rejeté.
+  const nbMarqueurs = (corps.match(/\[À VÉRIFIER/g) || []).length;
+  if (nbMarqueurs > 3) return { ok: false, lang, keyword, raison: `${nbMarqueurs} marqueurs [À VÉRIFIER]` };
+  if (nbMarqueurs) corps = corps.split("\n").map((l) => (l.includes("[À VÉRIFIER") ? l.split(/(?<=[.!?])\s+/).filter((ph) => !ph.includes("[À VÉRIFIER")).join(" ") : l)).filter((l, i, arr) => !(l.trim() === "" && arr[i - 1]?.trim() === "")).join("\n");
   if (corps.includes("[À VÉRIFIER")) return { ok: false, lang, keyword, raison: "marqueur [À VÉRIFIER] non résolu" };
 
   ({ titre, corps } = await relire(lang, titre, corps));
@@ -228,16 +232,20 @@ async function main() {
   for (const lang of Object.keys(nb)) {
     if (!nb[lang]) continue;
     try {
-      sujets.push(...(await selectionnerSujetsSeo({ lang, n: nb[lang] })));
+      // Candidats de réserve : si un article est rejeté, on passe au suivant.
+      sujets.push(...(await selectionnerSujetsSeo({ lang, n: nb[lang] * 3 })).map((x) => ({ ...x, lang })));
     } catch (e) {
       rapport.erreurs.push(`${lang} : ${e.message}`);
     }
   }
+  const reussis = { en: 0, fr: 0 };
   for (const s of sujets) {
+    if (reussis[s.lang] >= nb[s.lang]) continue;
     console.log(`Génération [${s.lang}] ${s.keyword}`);
     try {
       const r = await construireArticle(s);
       (r.ok ? rapport.articles : rapport.echecs).push(r);
+      if (r.ok) reussis[s.lang]++;
     } catch (e) {
       rapport.echecs.push({ lang: s.lang, keyword: s.keyword, raison: e.message });
     }

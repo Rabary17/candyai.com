@@ -12,8 +12,8 @@ const estLongueTraine = (k) => k.trim().split(/\s+/).length >= 3;
 
 // Le mot-clé doit parler du sujet du site (évite « john candy… », « candy crush »…).
 const PERTINENT = {
-  en: /\b(ai|a\.i\.|artificial intelligence|chatbot|chat ?bot|virtual|companion|girlfriend|boyfriend|candy ai|character)\b/i,
-  fr: /\b(ia|intelligence artificielle|chatbot|virtuel(le)?|compagnon|copine|petite amie|candy ai|candy ia|personnage)\b/i,
+  en: /\b(companion|girlfriend|boyfriend|candy ai|character ai|ai character|roleplay|role play|replika|ourdream|crushon|nomi ai|janitor ai|talkie|polybuzz|virtual (partner|wife|husband))\b/i,
+  fr: /\b(compagn(on|e) (ia|virtuel(le)?)|copine (ia|virtuelle)|petite amie|petit ami|petit copain|candy ai|candy ia|personnages? ia|roleplay|jeu de r[ôo]le|character ai|replika|ourdream|crushon)\b/i,
 };
 // Forme canonique pour comparer les variantes (« talking » = « talk », « artificial intelligence » = « ai »).
 const VIDES = new Set(["to", "with", "a", "an", "the", "for", "de", "la", "le", "les", "avec", "une", "un", "pour", "en"]);
