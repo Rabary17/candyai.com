@@ -53,7 +53,7 @@ function consigneStructure(lang, v, liens) {
   if (lang === "fr") {
     return `Rédige un article complet en Markdown (sans frontmatter). Ta réponse commence PAR LE TITRE,
 seul sur la première ligne, sans dièse ni guillemets ni gras, suivi d'une ligne vide puis du corps.
-Le titre est la question du lecteur (« Comment… ? », « Pourquoi… ? », « Lequel choisir… ? »), jamais le mot-clé brut.
+Le titre est la question du lecteur (« Comment… ? », « Pourquoi… ? », « Lequel choisir… ? »), jamais le mot-clé brut. Il contient le mot-clé cible et fait 65 caractères maximum.
 Aucun bloc de code autour de la réponse, aucun commentaire avant ou après.
 Corps, dans cet ordre :
 1. Encadré <div class="essentiel"> (ligne vide après la balise ouvrante et avant la fermante) : **L'essentiel en 30 secondes**, la réponse en 2 phrases.
@@ -73,7 +73,7 @@ jamais le même terme deux fois), tableau Markdown pour toute comparaison chiffr
 aucune formule creuse (« il est important de », « n'hésitez pas », « en conclusion », « dans un monde où »).`;
   }
   return `Write a complete Markdown article (no frontmatter). Your answer starts WITH THE TITLE alone on the
-first line, no hash, quotes or bold, then an empty line, then the body. The title is the reader's question
+first line, no hash, quotes or bold, then an empty line, then the body. The title (65 characters max, containing the target keyword) is the reader's question
 ("How…?", "Why…?", "Which… should you pick?"), never the raw keyword. No code fences, no comments before or after.
 Body, in this order:
 1. <div class="essentiel"> box (empty line after the opening tag and before the closing one): **The 30-second answer**, the answer in 2 sentences.
@@ -192,7 +192,10 @@ async function construireArticle(sujet) {
   corps = nettoyerLiens(corps, liens);
   if (estInterdit(titre) || estInterdit(corps)) return { ok: false, lang, keyword, raison: "terme interdit détecté (sécurité)" };
 
-  const slug = slugify(titre);
+  // Titre trop long → raccourci au dernier mot entier ; slug construit sur le mot-clé (URL courte et stable).
+  if (titre.length > 70) titre = titre.slice(0, 68).replace(/\s+\S*$/, "").replace(/[,;:\-–]+$/, "") + (titre.trim().endsWith("?") ? " ?" : "");
+  if (lang === "en") titre = titre.replace(/\s+\?$/, "?");
+  const slug = slugify(keyword);
   const fichier = path.join(dirBlog(lang), `${slug}.md`);
   if (fs.existsSync(fichier)) return { ok: false, lang, keyword, raison: "fichier déjà existant" };
 

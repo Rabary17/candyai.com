@@ -16,6 +16,7 @@ const config: NextConfig = {
     return [
       { source: "/alternatives/candy-ai-vs-:x/", destination: "/vs/candy-ai-vs-:x/", permanent: true },
       { source: "/fr/alternatives/candy-ai-vs-:x/", destination: "/fr/vs/candy-ai-vs-:x/", permanent: true },
+      { source: "/blog/how-do-you-use-a-character-ai-chat-bot-without-wasting-time-or-handing-over-more/", destination: "/blog/character-ai-chat-bot/", permanent: true },
       { source: "/ai-girlfriend/create-your-own/", destination: "/ai-girlfriend/generator/", permanent: true },
     ];
   },
