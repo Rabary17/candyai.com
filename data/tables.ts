@@ -101,7 +101,7 @@ export const TABLES: Record<string, Table> = {
       { app: "Candy AI", cells: ["Images & customisation", "$3.99 (yearly)", "Limited", "7.4/10"], program: "candy-ai" },
       { app: "OurDream AI", cells: ["Memory, role-play & video", "$9.99 (yearly)", "50 msgs/day", "7.6/10"], program: "ourdream-ai" },
       { app: "CrushOn AI", cells: ["Text role-play", "$4.91 (yearly)", "Limited", "7.8/10"], program: "crushon-ai" },
-      { app: "Nomi AI", cells: ["Memory & long chats", T, T, T], program: "nomi-ai" },
+      { app: "Nomi AI", cells: ["Memory & long chats", "$8.33 (yearly)", "Limited", "8.1/10"], program: "nomi-ai" },
       { app: "Kupid AI", cells: [T, T, T, T], program: "kupid-ai" },
       { app: "Replika", cells: ["Friendship", "~$7.99 (Pro)", "✅", T], program: "replika" },
     ],
@@ -125,7 +125,7 @@ export const TABLES: Record<string, Table> = {
     fr: ["Application", "Pourquoi changer", "Gratuit", "Filtre", "Notre note"],
     rows: [
       { app: "CrushOn AI", cells: ["Fewer filters, huge library", "Limited", "Optional (18+)", "7.8/10"], program: "crushon-ai" },
-      { app: "Nomi AI", cells: ["Long-term memory", T, "Optional (18+)", T], program: "nomi-ai" },
+      { app: "Nomi AI", cells: ["Best long-term memory", "Limited", "Optional (18+)", "8.1/10"], program: "nomi-ai" },
       { app: "OurDream AI", cells: ["Memory + images & video", "50 msgs/day", "Optional (18+)", "7.6/10"], program: "ourdream-ai" },
       { app: "Joi AI", cells: [T, T, "Optional (18+)", T], program: "joi-ai" },
       { app: "Candy AI", cells: ["Custom characters + images", "Limited", "Optional (18+)", "7.4/10"], program: "candy-ai" },
@@ -138,7 +138,7 @@ export const TABLES: Record<string, Table> = {
     rows: [
       { app: "CrushOn AI", cells: ["✅ community-made", "Limited", "❌", "7.8/10"], program: "crushon-ai" },
       { app: "Candy AI", cells: ["✅ (boyfriend mode)", "Limited", "✅ tokens", "7.4/10"], program: "candy-ai" },
-      { app: "Nomi AI", cells: ["✅ (any gender)", T, T, T], program: "nomi-ai" },
+      { app: "Nomi AI", cells: ["✅ (any gender)", "Limited", "✅", "8.1/10"], program: "nomi-ai" },
       { app: "Replika", cells: ["✅ (any gender)", "✅", "✅", T], program: "replika" },
       { app: "Character AI", cells: ["✅ user-made", "✅", "✅", T] },
     ],
@@ -149,7 +149,7 @@ export const TABLES: Record<string, Table> = {
     rows: [
       { app: "Character AI", cells: ["Unlimited", "✅", "Strict filter", T] },
       { app: "CrushOn AI", cells: ["Limited (changed in 2026)", "✅", "Basic model, filtered", "7.8/10"], program: "crushon-ai" },
-      { app: "Nomi AI", cells: [T, "✅", T, T], program: "nomi-ai" },
+      { app: "Nomi AI", cells: ["Limited daily", "✅", "Slower replies", "8.1/10"], program: "nomi-ai" },
       { app: "Candy AI", cells: ["5 in total", "✅", "Very short trial", "7.4/10"], program: "candy-ai" },
       { app: "Replika", cells: ["Unlimited (friend)", "✅", "No romance", T], program: "replika" },
     ],
