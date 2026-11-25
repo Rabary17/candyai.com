@@ -265,3 +265,16 @@ td:first-child{font-family:var(--f-display);font-weight:700;color:var(--text)}
 .hero__text{min-width:0}
 @media (max-width:900px){.hero__grid{grid-template-columns:minmax(0,1fr)}}
 .prose > *{min-width:0;max-width:100%}
+
+/* ---- Blog : encadrés de l'autopilote (mêmes classes que techno-play) ---- */
+.post .essentiel,.post .exemple,.post .attention,.post .lexique{border-radius:var(--r-md);padding:18px 22px;margin:1.6em 0}
+.post .essentiel{background:var(--paper);color:var(--ink)}
+.post .essentiel strong{color:var(--ink)}
+.post .exemple{background:var(--surface);border-left:3px solid var(--lilac)}
+.post .attention{background:rgba(240,140,122,.08);border-left:3px solid var(--bad)}
+.post .lexique{background:var(--surface-2)}
+.post .essentiel > :first-child,.post .exemple > :first-child,.post .attention > :first-child,.post .lexique > :first-child{margin-top:0}
+.post h3{margin-top:1.6em}
+.post ul,.post ol{padding-left:1.3em}
+.related--blog{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+figure.hero__media{margin:0}

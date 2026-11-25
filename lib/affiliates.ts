@@ -2,7 +2,7 @@
 // Source unique de vérité pour tous les liens affiliés.
 // Les URL et identifiants viennent des variables d'environnement (Vercel), jamais du contenu.
 
-export type ProgramId = "candy-ai" | "ourdream-ai" | "kupid-ai" | "nectar-ai" | "replika";
+export type ProgramId = "candy-ai" | "ourdream-ai" | "kupid-ai" | "nectar-ai" | "replika" | "crushon-ai" | "nomi-ai" | "secrets-ai" | "joi-ai";
 
 type Program = {
   name: string;
@@ -41,7 +41,7 @@ export const PROGRAMS: Record<ProgramId, Program> = {
     name: "OurDream AI",
     url: env("AFF_OURDREAM_AI_URL"),
     subParam: env("AFF_OURDREAM_AI_SUB_PARAM") ?? "aff_sub",
-    fallback: { en: "/alternatives/candy-ai-vs-ourdream-ai/", fr: "/fr/alternatives/" },
+    fallback: { en: "/ourdream-ai/", fr: "/fr/ourdream-ai/" },
   },
   "kupid-ai": {
     name: "Kupid AI",
@@ -54,6 +54,30 @@ export const PROGRAMS: Record<ProgramId, Program> = {
     url: env("AFF_NECTAR_AI_URL"),
     subParam: env("AFF_NECTAR_AI_SUB_PARAM") ?? "sub1",
     fallback: { en: "/alternatives/", fr: "/fr/alternatives/" },
+  },
+  "crushon-ai": {
+    name: "CrushOn AI",
+    url: env("AFF_CRUSHON_AI_URL"),
+    subParam: env("AFF_CRUSHON_AI_SUB_PARAM") ?? "sub1",
+    fallback: { en: "/crushon-ai/", fr: "/fr/crushon-ai/" },
+  },
+  "nomi-ai": {
+    name: "Nomi AI",
+    url: env("AFF_NOMI_AI_URL"),
+    subParam: env("AFF_NOMI_AI_SUB_PARAM") ?? "sub1",
+    fallback: { en: "/nomi-ai/", fr: "/fr/compagnon-ia/" },
+  },
+  "secrets-ai": {
+    name: "Secrets AI",
+    url: env("AFF_SECRETS_AI_URL"),
+    subParam: env("AFF_SECRETS_AI_SUB_PARAM") ?? "aff_sub",
+    fallback: { en: "/ai-girlfriend/", fr: "/fr/petite-amie-ia/" },
+  },
+  "joi-ai": {
+    name: "Joi AI",
+    url: env("AFF_JOI_AI_URL"),
+    subParam: env("AFF_JOI_AI_SUB_PARAM") ?? "aff_sub",
+    fallback: { en: "/ai-roleplay/", fr: "/fr/ia-roleplay/" },
   },
   replika: {
     name: "Replika",

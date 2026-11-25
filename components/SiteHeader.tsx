@@ -13,9 +13,9 @@ export function SiteHeader({ lang, nav, tagline, cta, alternates }: Props) {
   return (
     <header className="header">
       <div className="wrap header__in">
-        <Link className="logo" href={lang === "fr" ? "/fr/" : "/"} aria-label="nocturne">
+        <Link className="logo" href={lang === "fr" ? "/fr/" : "/"} aria-label="AI Girlfriend Rated">
           <img src="/brand/favicon.svg" width={34} height={34} alt="" />
-          <span><span className="logo__name">nocturne</span><span className="logo__tag">{tagline}</span></span>
+          <span><span className="logo__name">AI Girlfriend Rated</span><span className="logo__tag">{tagline}</span></span>
         </Link>
         <button className="burger" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>☰</button>
         <nav className={`nav${open ? " is-open" : ""}`}>

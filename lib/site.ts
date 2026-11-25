@@ -2,19 +2,21 @@ export type Lang = "en" | "fr";
 
 /** Hôte canonique final (sans slash). À définir dans Vercel : SITE_URL=https://www.<domaine> */
 export const SITE_URL = (process.env.SITE_URL || "https://example.com").replace(/\/$/, "");
-export const SITE_NAME = "nocturne";
+export const SITE_NAME = "AI Girlfriend Rated";
 
 /** Pages qui contiennent encore des <Todo> : noindex tant que TODO_POLICY !== "allow". */
 export const TODO_POLICY = process.env.TODO_POLICY === "allow" ? "allow" : "noindex";
 
 export const T = {
   en: {
-    tagline: "AI COMPANIONS · TESTED",
+    tagline: "AI GIRLFRIEND & COMPANION APPS · RATED",
     nav: [
-      { href: "/candy-ai/", label: "Candy AI Guide" },
-      { href: "/alternatives/", label: "Alternatives" },
       { href: "/ai-girlfriend/", label: "AI Girlfriend" },
+      { href: "/ai-roleplay/", label: "AI Roleplay" },
       { href: "/ai-companion/", label: "AI Companion" },
+      { href: "/ai-boyfriend/", label: "AI Boyfriend" },
+      { href: "/alternatives/", label: "Alternatives" },
+      { href: "/blog/", label: "Blog" },
     ],
     cta: "Try Candy AI",
     disclosure: "We may earn a commission if you subscribe through our links. It never changes our score.",
@@ -34,22 +36,24 @@ export const T = {
     bestFor: "Best for",
     skipIf: "Skip it if",
     sticky: "Candy AI · from ~$3.99/mo",
-    footerNote: "Independent site, not affiliated with EverAI Limited.",
+    footerNote: "Independent site, not affiliated with any of the apps we review.",
     footer: [
-      { title: "Candy AI Guide", links: [["/candy-ai/pricing/", "Pricing"], ["/candy-ai/free/", "Is it free?"], ["/candy-ai/is-it-safe/", "Is it safe?"], ["/candy-ai/cancel-subscription/", "Cancel"]] },
-      { title: "Alternatives", links: [["/alternatives/", "Candy AI alternatives"], ["/alternatives/free/", "Free alternatives"], ["/alternatives/candy-ai-vs-replika/", "Candy AI vs Replika"]] },
-      { title: "AI Girlfriend", links: [["/ai-girlfriend/", "Best AI girlfriend apps"], ["/ai-girlfriend/free/", "Free AI girlfriend"], ["/ai-companion/", "AI companion apps"]] },
+      { title: "Guides", links: [["/ai-girlfriend/", "Best AI girlfriend apps"], ["/ai-roleplay/", "AI roleplay platforms"], ["/ai-companion/", "AI companion apps"], ["/ai-boyfriend/", "AI boyfriend apps"], ["/ai-girlfriend/free/", "Free AI girlfriend"]] },
+      { title: "Alternatives", links: [["/alternatives/", "Character AI alternatives"], ["/alternatives/candy-ai/", "Candy AI alternatives"], ["/alternatives/talkie-ai/", "Talkie AI alternatives"], ["/alternatives/janitor-ai/", "Janitor AI alternatives"], ["/alternatives/polybuzz/", "PolyBuzz alternatives"]] },
+      { title: "Reviews", links: [["/candy-ai/", "Candy AI review"], ["/ourdream-ai/", "OurDream AI review"], ["/crushon-ai/", "CrushOn AI review"], ["/nomi-ai/", "Nomi AI review"], ["/ai-companion/replika-review/", "Replika review"], ["/blog/", "Blog"]] },
       { title: "About", links: [["/about/", "About us"], ["/how-we-test/", "How we test"], ["/affiliate-disclosure/", "Affiliate disclosure"], ["/legal/", "Legal"], ["/privacy/", "Privacy"], ["/contact/", "Contact"]] },
     ],
     notFound: "Page not found",
   },
   fr: {
-    tagline: "COMPAGNONS IA · TESTÉS",
+    tagline: "PETITE AMIE & COMPAGNON IA · NOTÉS",
     nav: [
-      { href: "/fr/candy-ai/", label: "Guide Candy AI" },
-      { href: "/fr/alternatives/", label: "Alternatives" },
       { href: "/fr/petite-amie-ia/", label: "Petite amie IA" },
+      { href: "/fr/ia-roleplay/", label: "IA roleplay" },
       { href: "/fr/compagnon-ia/", label: "Compagnon IA" },
+      { href: "/fr/petit-ami-ia/", label: "Petit ami IA" },
+      { href: "/fr/alternatives/", label: "Alternatives" },
+      { href: "/fr/blog/", label: "Blog" },
     ],
     cta: "Essayer Candy AI",
     disclosure: "Nous pouvons toucher une commission si vous vous abonnez via nos liens. Elle ne modifie jamais notre note.",
@@ -69,11 +73,11 @@ export const T = {
     bestFor: "Pour qui",
     skipIf: "À éviter si",
     sticky: "Candy AI · dès ~3,99 $/mois",
-    footerNote: "Site indépendant, non affilié à EverAI Limited.",
+    footerNote: "Site indépendant, non affilié aux applications testées.",
     footer: [
-      { title: "Guide Candy AI", links: [["/fr/candy-ai/prix/", "Prix"], ["/fr/candy-ai/gratuit/", "Gratuit ?"], ["/fr/candy-ai/fiable/", "Fiable ?"], ["/fr/candy-ai/resilier/", "Résilier"]] },
-      { title: "Alternatives", links: [["/fr/alternatives/", "Alternatives à Candy AI"], ["/fr/alternatives/gratuites/", "Alternatives gratuites"], ["/fr/alternatives/candy-ai-vs-replika/", "Candy AI ou Replika"]] },
-      { title: "Petite amie IA", links: [["/fr/petite-amie-ia/", "Meilleures applis"], ["/fr/petite-amie-ia/gratuite/", "Petite amie IA gratuite"], ["/fr/compagnon-ia/", "Compagnon IA"]] },
+      { title: "Guides", links: [["/fr/petite-amie-ia/", "Meilleures applis de petite amie IA"], ["/fr/ia-roleplay/", "IA roleplay"], ["/fr/compagnon-ia/", "Compagnon IA"], ["/fr/petit-ami-ia/", "Petit ami IA"], ["/fr/petite-amie-ia/gratuite/", "Petite amie IA gratuite"]] },
+      { title: "Alternatives", links: [["/fr/alternatives/", "Alternatives à Character AI"], ["/fr/alternatives/candy-ai/", "Alternatives à Candy AI"], ["/fr/alternatives/gratuites/", "Alternatives gratuites"], ["/fr/vs/candy-ai-vs-replika/", "Candy AI ou Replika"]] },
+      { title: "Avis", links: [["/fr/candy-ai/", "Avis Candy AI"], ["/fr/ourdream-ai/", "Avis OurDream AI"], ["/fr/crushon-ai/", "Avis CrushOn AI"], ["/fr/compagnon-ia/replika-avis/", "Avis Replika"], ["/fr/blog/", "Blog"]] },
       { title: "À propos", links: [["/fr/a-propos/", "Qui sommes-nous"], ["/fr/methode-de-test/", "Méthode de test"], ["/fr/affiliation/", "Affiliation"], ["/fr/mentions-legales/", "Mentions légales"], ["/fr/confidentialite/", "Confidentialité"], ["/fr/contact/", "Contact"]] },
     ],
     notFound: "Page introuvable",

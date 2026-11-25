@@ -137,9 +137,9 @@ export function getMdxComponents(lang: Lang) {
       </section>
     ),
 
-    CtaBand: ({ title, text }: { title: string; text: string }) => (
+    CtaBand: ({ title, text, program, label }: { title: string; text: string; program?: string; label?: string }) => (
       <div className="band"><div style={{ display: "flex", flexDirection: "column", gap: 14 }}><h2>{title}</h2><p>{text}</p></div>
-        <div className="band__actions"><AffiliateLink placement="band" className="btn btn--dark btn--lg">{t.cta} →</AffiliateLink></div></div>
+        <div className="band__actions"><AffiliateLink program={(program ?? "candy-ai") as ProgramId} placement="band" className="btn btn--dark btn--lg">{label ?? t.cta} →</AffiliateLink></div></div>
     ),
 
     ReadNext: ({ items }: { items: string[]; variant?: string }) => <ReadNextGrid items={items} lang={lang} />,

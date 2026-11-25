@@ -1,0 +1,73 @@
+# Autopilote blog (même chaîne que techno-play.com) : sélection des sujets du jour
+# (DataForSEO, EN + FR), génération sous garde-fou anti-hallucination, relecture,
+# image libre de droit, contrôles bloquants, commit et push sur main.
+# Le push déclenche le déploiement Vercel (intégration Git).
+#
+# Secrets à créer une fois (GitHub → Settings → Secrets and variables → Actions) :
+#   DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD
+#   CLAUDE_CODE_OAUTH_TOKEN   — généré en local via `claude setup-token` (abonnement, jamais l'API payante :
+#                               ne JAMAIS ajouter ANTHROPIC_API_KEY ici, elle serait prioritaire)
+#   UNSPLASH_ACCESS_KEY, PEXELS_API_KEY, PIXABAY_API_KEY
+name: Autopilote blog
+
+on:
+  schedule:
+    - cron: "11 6 * * *" # 06:11 UTC = 09:11 à Antananarivo (décalé de techno-play, 06:00)
+  workflow_dispatch:
+    inputs:
+      en:
+        description: "Articles EN"
+        default: "1"
+      fr:
+        description: "Articles FR"
+        default: "1"
+      dry_run:
+        description: "true = génère sans commit/push"
+        type: boolean
+        default: false
+
+concurrency:
+  group: autopilote-blog
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Installer la CLI Claude Code (auth par abonnement)
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+      - name: Configurer git
+        run: |
+          git config user.name "autopilote-blog[bot]"
+          git config user.email "autopilote-blog@users.noreply.github.com"
+      - name: Lancer le pipeline
+        env:
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: |
+          EN="${{ github.event.inputs.en || '1' }}"
+          FR="${{ github.event.inputs.fr || '1' }}"
+          DRY="${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}"
+          node scripts/seo/run-pipeline.js --en "$EN" --fr "$FR" --push $DRY
+      - name: Rapport du run
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport-blog-${{ github.run_id }}
+          path: _strategie/rapports-pipeline/*.json
+          retention-days: 90

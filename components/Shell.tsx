@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import { allDocs } from "@/lib/content";
+import { getAllPosts, postUrl } from "@/lib/posts";
 import { SITE_URL, SITE_NAME, T, type Lang } from "@/lib/site";
 import { AgeGate } from "./AgeGate";
 import { SiteHeader } from "./SiteHeader";
@@ -15,6 +16,8 @@ const mono = Geist_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: 
 function alternatesMap() {
   const m: Record<string, string> = {};
   for (const d of allDocs()) if (d.front.alternate) m[d.route] = d.front.alternate;
+  m["/blog/"] = "/fr/blog/"; m["/fr/blog/"] = "/blog/";
+  for (const lang of ["en", "fr"] as const) for (const p of getAllPosts(lang)) if (p.alternate) m[postUrl(p)] = postUrl({ lang: lang === "en" ? "fr" : "en", slug: p.alternate });
   return m;
 }
 

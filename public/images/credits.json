@@ -325,5 +325,226 @@
    641
   ],
   "note": "réutilise ai-girlfriend-create"
+ },
+ "ai-roleplay-apps": {
+  "title": "Man Phone",
+  "creator": "Nordwood Themes",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/man-phone-KNSJXBFYFZ",
+  "w": 5184,
+  "h": 3456,
+  "file": "/images/hero/ai-roleplay-apps.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-roleplay-free": {
+  "title": "Macbook Apple",
+  "creator": "Negative Space",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/macbook-apple-9JEXI8ECJY",
+  "w": 5472,
+  "h": 3648,
+  "file": "/images/hero/ai-roleplay-free.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-boyfriend": {
+  "title": "Man Portrait",
+  "creator": "Matt Moloney",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/man-portrait-ZTNVVRFBWS",
+  "w": 8256,
+  "h": 5504,
+  "file": "/images/hero/ai-boyfriend.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-girlfriend-apps": {
+  "title": "Phone Hand",
+  "creator": "Jamie Hamel-Smith",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/phone-hand-REVDUWPH4K",
+  "w": 4032,
+  "h": 3024,
+  "file": "/images/hero/ai-girlfriend-apps.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ourdream-ai": {
+  "title": "Travel Dream",
+  "creator": "Aleksei Bakulin",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/travel-dream-ZQPEH0WSBH",
+  "w": 4581,
+  "h": 3436,
+  "file": "/images/hero/ourdream-ai.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "crushon-ai": {
+  "title": "Toronto Sign",
+  "creator": "Hamza Ullah",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/toronto-sign-Z5MPH58XR0",
+  "w": 5184,
+  "h": 3456,
+  "file": "/images/hero/crushon-ai.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "nomi-ai": {
+  "title": "Photography Gear",
+  "creator": "Top Down Tech",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/photography-gear-Z5IW9QEFL6",
+  "w": 5951,
+  "h": 3973,
+  "file": "/images/hero/nomi-ai.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-girlfriend-video": {
+  "title": "Videographer Cameraman",
+  "creator": "Leeroy",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/videographer-cameraman-OQT16Q7SG7",
+  "w": 3200,
+  "h": 2133,
+  "file": "/images/hero/ai-girlfriend-video.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-robot": {
+  "title": "Robot Technology",
+  "creator": "Alex Knight",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/robot-technology-WUBMLJRYEK",
+  "w": 4896,
+  "h": 3264,
+  "file": "/images/hero/ai-robot.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-girlfriend-simulator": {
+  "title": "Video Games",
+  "creator": "JESHOOTS.com",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/video-games-YU7ENGR6EK",
+  "w": 4800,
+  "h": 3200,
+  "file": "/images/hero/ai-girlfriend-simulator.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-roleplay-unlimited": {
+  "title": "Keyboard Typing",
+  "creator": "Design by Matt",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/keyboard-typing-UATQGKPFOH",
+  "w": 6000,
+  "h": 4000,
+  "file": "/images/hero/ai-roleplay-unlimited.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "safety": {
+  "title": "Rotterdam Locks",
+  "creator": "Skitter Photo",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/rotterdam-locks-TMCQJSSQUM",
+  "w": 5456,
+  "h": 3632,
+  "file": "/images/hero/safety.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "secrets-ai": {
+  "title": "People Girls",
+  "creator": "Ben White",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/people-girls-FWE00FL55K",
+  "w": 6016,
+  "h": 4016,
+  "file": "/images/hero/secrets-ai.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "versus-2": {
+  "title": "Chess Game",
+  "creator": "Lou Levit",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/chess-game-308ED74931",
+  "w": 2509,
+  "h": 1673,
+  "file": "/images/hero/versus-2.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "alternatives-character-ai": {
+  "title": "Road Pavement",
+  "creator": "Joshua Sortino",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/road-pavement-HAM087SSHZ",
+  "w": 4240,
+  "h": 2832,
+  "file": "/images/hero/alternatives-character-ai.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "pricing": {
+  "title": "Money Currency",
+  "creator": "Andrew Pons",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/money-currency-ITA18FXIBL",
+  "w": 5184,
+  "h": 3456,
+  "file": "/images/hero/pricing.webp",
+  "size": [
+   960,
+   540
+  ]
+ },
+ "ai-roleplay": {
+  "title": "Library Books",
+  "creator": "Josh Felise",
+  "license": "CC0 1.0 (StockSnap)",
+  "source": "https://stocksnap.io/photo/library-books-4TDHSPIMJ6",
+  "w": 8192,
+  "h": 4608,
+  "file": "/images/hero/ai-roleplay.webp",
+  "size": [
+   960,
+   540
+  ]
  }
 }

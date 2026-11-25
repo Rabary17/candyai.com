@@ -2,7 +2,23 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   trailingSlash: true,
-  images: { formats: ["image/avif", "image/webp"] },
+  images: {
+    formats: ["image/avif", "image/webp"],
+    // Visuels des articles de blog (autopilote) : hotlink exigé par Unsplash, comme sur techno-play
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "images.pexels.com" },
+      { protocol: "https", hostname: "pixabay.com" },
+      { protocol: "https", hostname: "cdn.pixabay.com" },
+    ],
+  },
+  async redirects() {
+    return [
+      { source: "/alternatives/candy-ai-vs-:x/", destination: "/vs/candy-ai-vs-:x/", permanent: true },
+      { source: "/fr/alternatives/candy-ai-vs-:x/", destination: "/fr/vs/candy-ai-vs-:x/", permanent: true },
+      { source: "/ai-girlfriend/create-your-own/", destination: "/ai-girlfriend/generator/", permanent: true },
+    ];
+  },
   async headers() {
     return [
       { source: "/:path*", headers: [
