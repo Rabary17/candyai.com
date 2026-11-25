@@ -61,9 +61,8 @@ npm run build && npm start   # build de production
 
 | Où | Quoi |
 |---|---|
-| GitHub → Settings → Secrets → Actions | `DATAFORSEO_LOGIN`, `DATAFORSEO_PASSWORD`, `CLAUDE_CODE_OAUTH_TOKEN` (`claude setup-token`), `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`, `PIXABAY_API_KEY`, `VERCEL_DEPLOY_HOOK` |
+| GitHub → Settings → Secrets → Actions | `DATAFORSEO_LOGIN`, `DATAFORSEO_PASSWORD`, `CLAUDE_CODE_OAUTH_TOKEN` (`claude setup-token`), `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`, `PIXABAY_API_KEY` |
 | GitHub → Settings → Actions → General | « Workflow permissions » : Read and write |
-| Vercel → Settings → Git → Deploy Hooks | créer un hook sur `main`, URL → secret `VERCEL_DEPLOY_HOOK` |
 | Onglet Actions | lancer « Autopilote blog » à la main avec `dry_run = true` pour le premier test |
 
-Workflows : `autopilote-blog.yml` (tous les jours 09:11 Tana, 1 EN + 1 FR) · `publication-quotidienne.yml` (rebuild 08:23 Tana).
+Workflows : `autopilote-blog.yml` (tous les jours 09:11 Tana, 1 EN + 1 FR). Chaque article est daté du jour et poussé sur `main` : Vercel déploie automatiquement (comme techno-play).
